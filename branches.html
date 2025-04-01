@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Branches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            padding: 20px;
+            color: white;
+        }
+        .branch-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .branch {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            color: black;
+            text-align: center;
+            cursor: pointer;
+        }
+        .branch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .address {
+            display: none;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+        }
+    </style>
+    <script>
+        function toggleAddress(id) {
+            var addresses = document.querySelectorAll('.address');
+            addresses.forEach(function(address) {
+                if (address.id === id) {
+                    address.style.display = (address.style.display === "block") ? "none" : "block";
+                } else {
+                    address.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Our Institute Branches</h1>
+
+    <div class="branch-container">
+        <div class="branch" onclick="toggleAddress('branch1')">
+            <h2>Branch 1: Main Branch</h2>
+            <div id="branch1" class="address">
+                <p>E 192 20, Futa Rd, near Kanhaiya Public School, 
+                    west Karawal Nagar, Delhi, 110094
+                </p>
+                <p>Contact: +91 9667229623</p>
+            </div>
+        </div>
+
+        <div class="branch" onclick="toggleAddress('branch2')">
+            <h2>Branch 2: </h2>branch 2
+            <div id="branch2" class="address">
+                <p>G-110 g/f Kh-9 Main Pusta Road West Karawal Nagar, Delhi-110094</p>
+                <p>Contact: +91 876548542</p>
+            </div>
+        </div>
+
+        <div class="branch" onclick="toggleAddress('branch3')">
+            <h2>Branch branch 2</h2>
+            <div id="branch3" class="address">
+                <p>First floor C-10, Makkhan market, Near MP model school Mukund vuahr, Delhi-110094</p>
+                <p>Contact: +91 7654354783</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
